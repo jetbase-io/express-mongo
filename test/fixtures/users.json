@@ -1,0 +1,28 @@
+[{
+  "User": [
+    {
+      "_id": "5c7508ca9ce5b5d838296281",
+      "email": "admin@jetbase.com",
+      "first_name": "admin",
+      "last_name": "jetbase",
+      "password": "$2a$10$tzCMt.7HPeoPdFvW6jzi5eYjn.v6GjSr9o0ttalHHHebbF5gBet6q",
+      "role": "admin"
+    },
+    {
+      "_id": "5c7508ca9ce5b5d838296282",
+      "email": "user@jetbase.com",
+      "first_name": "user",
+      "last_name": "jetbase",
+      "password": "$2a$10$tzCMt.7HPeoPdFvW6jzi5eYjn.v6GjSr9o0ttalHHHebbF5gBet6q",
+      "role": "user"
+    },
+    {
+      "_id": "5c7508ca9ce5b5d838296283",
+      "email": "delete@jetbase.com",
+      "first_name": "delete",
+      "last_name": "jetbase",
+      "password": "$2a$10$tzCMt.7HPeoPdFvW6jzi5eYjn.v6GjSr9o0ttalHHHebbF5gBet6q",
+      "role": "user"
+    }
+  ]
+}]

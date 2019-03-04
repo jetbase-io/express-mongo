@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb",
+  "globals": {
+    "it": false,
+    "describe": false,
+    "before": false
+  },
+  "rules": {
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_conditions", "_update"] }]
+  }
+}

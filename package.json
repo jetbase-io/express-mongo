@@ -1,0 +1,51 @@
+{
+  "name": "jetbase-express-mongo",
+  "version": "1.0.0",
+  "description": "Node.js backend for JetBase",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node app",
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "NODE_ENV=test mocha --require  @babel/register test/controllers/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@casl/ability": "^2.5.1",
+    "@casl/mongoose": "^2.3.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.0",
+    "mongoose-bcrypt": "^1.6.0",
+    "mongoose-string-query": "^0.2.7",
+    "mongoose-timestamp": "^0.6.0",
+    "node-cron": "^2.0.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^6.0.2"
+  }
+}
