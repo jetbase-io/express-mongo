@@ -6,8 +6,6 @@ cache:
     - "node_modules"
 services: mongodb
 env:
-  - DB_URL=mongodb://travis:test@127.0.0.1:27017/jetbasetest
-  - PORT=3001
-  - JWT_SECRET=shhhhhhared-secret
+  - DB_URL=mongodb://travis:test@127.0.0.1:27017/jetbasetest PORT=3001 JWT_SECRET=shhhhhhared-secret
 before_script:
   - mongo jetbasetest --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
