@@ -6,7 +6,7 @@
   "scripts": {
     "start": "babel-node app",
     "lint": "./node_modules/.bin/eslint .",
-    "test": "NODE_ENV=test mocha --require  @babel/register test/controllers/*.js"
+    "test": "NODE_ENV=test mocha --require  @babel/register test/controllers/*.js --exit"
   },
   "author": "",
   "license": "ISC",
