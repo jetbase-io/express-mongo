@@ -8,8 +8,8 @@
     "lint": "./node_modules/.bin/eslint .",
     "test": "NODE_ENV=test mocha --require  @babel/register test/controllers/*.js --exit"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "JetBase team",
+  "license": "MIT",
   "dependencies": {
     "@casl/ability": "^2.5.1",
     "@casl/mongoose": "^2.3.0",
