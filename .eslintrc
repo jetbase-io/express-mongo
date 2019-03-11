@@ -6,6 +6,22 @@
     "before": false
   },
   "rules": {
-    "no-underscore-dangle": ["error", { "allow": ["_id", "_conditions", "_update"] }]
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id",
+          "_conditions",
+          "_update"
+        ]
+      }
+    ]
   }
 }
