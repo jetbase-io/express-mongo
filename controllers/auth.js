@@ -15,7 +15,9 @@ exports.login = (req, res, next) => {
         if (error) return next(error);
         const body = { _id: user._id, email: user.email, role: user.role };
         const token = jwt.sign({ user: body }, process.env.JWT_SECRET, { expiresIn: '30m' });
-        return res.json({ token, role: user.role, permissions: permissions[user.role] });
+        return res.json({
+          id: user.id, token, role: user.role, permissions: permissions[user.role],
+        });
       });
     } catch (error) {
       return next(error);

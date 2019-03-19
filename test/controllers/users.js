@@ -17,7 +17,7 @@ describe('User controller', () => {
     await dropDBs();
     await loadFixture('users');
     user = await User.findOne({});
-    expect(user).to.not.be.null;
+    expect(user).to.not.be.null; // eslint-disable-line
   });
 
   describe('get', () => {
@@ -114,7 +114,8 @@ describe('User controller', () => {
         oldpassword: 'jetbaseadmin',
         newpassword: 'jetbaseadmin2',
       };
-      const response = await withUserLogin(chai.request(api).put('/api/v1/users/5c7508ca9ce5b5d838296281/password').send(data));
+      const response = await withUserLogin(chai.request(api)
+        .put('/api/v1/users/5c7508ca9ce5b5d838296281/password').send(data));
       expect(response).to.have.status(403);
     });
 
@@ -123,7 +124,8 @@ describe('User controller', () => {
         oldpassword: 'jetbaseadmin',
         newpassword: 'jetbaseadmin2',
       };
-      const response = await withUserLogin(chai.request(api).put('/api/v1/users/5c7508ca9ce5b5d838296282/password').send(data));
+      const response = await withUserLogin(chai.request(api)
+        .put('/api/v1/users/5c7508ca9ce5b5d838296282/password').send(data));
       expect(response).to.have.status(200);
     });
 
@@ -132,7 +134,8 @@ describe('User controller', () => {
         oldpassword: 'jetbaseadmin',
         newpassword: 'jetbaseadmin2',
       };
-      const response = await withAdminLogin(chai.request(api).put('/api/v1/users/5c7508ca9ce5b5d838296282/password').send(data));
+      const response = await withAdminLogin(chai.request(api)
+        .put('/api/v1/users/5c7508ca9ce5b5d838296282/password').send(data));
       expect(response).to.have.status(200);
     });
   });

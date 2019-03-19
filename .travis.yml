@@ -10,4 +10,5 @@ env:
 before_script:
   - mongo jetbasetest --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script:
+  - npm run lint
   - npm test

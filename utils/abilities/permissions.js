@@ -1,14 +1,14 @@
 const permissions = {
   admin: [
-    { action: 'create', enities: 'User', can: true },
-    { action: 'delete', enities: 'User', can: true },
-    { action: 'update', enities: 'User', can: true },
+    { action: 'create', entities: 'User', can: true },
+    { action: 'delete', entities: 'User', can: true },
+    { action: 'update', entities: 'User', can: true },
   ],
   user: [
-    { action: 'read', enities: 'User', can: true },
+    { action: 'read', entities: 'User', can: true },
   ],
   common: [
-    { action: 'read', enities: 'User', can: true },
+    { action: 'read', entities: 'User', can: true },
   ],
 };
 

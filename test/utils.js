@@ -1,3 +1,4 @@
+/* eslint-disable */
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 import db from '../db';
@@ -32,26 +33,8 @@ export async function dropDBs() {
 }
 
 export async function loadFixture(...fixtures) {
-  const filters = {
-    Article: (articles) => {
-      for (const article of articles) {
-        article.enclosures = article.enclosures || [];
-      }
-      CreateFingerPrints(articles, 'STABLE');
-      return articles;
-    },
-    Episode: (episodes) => {
-      for (const episode of episodes) {
-        episode.enclosures = episode.enclosures || [];
-      }
-      CreateFingerPrints(episodes, 'STABLE');
-      return episodes;
-    },
-  };
-
   for (const fixture of fixtures) {
     const batch = require(`./fixtures/${fixture}.json`);
-
     for (const models of batch) {
       for (const modelName in models) {
         const fixedData = models[modelName].map((data) => {
@@ -66,7 +49,7 @@ export async function loadFixture(...fixtures) {
           }
           return data;
         });
-        const filter = filters[modelName] || (x => x);
+        const filter = (x => x);
         const filteredData = filter(fixedData);
         const modulePath = `../models/${modelName.toLowerCase()}`;
         const cachedModule = require.cache[require.resolve(modulePath)];

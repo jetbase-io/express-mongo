@@ -4,9 +4,9 @@ import permissions from './permissions';
 const defineAbility = role => AbilityBuilder.define((can, cannot) => {
   permissions[role].forEach((item) => {
     if (item.can) {
-      can(item.action, item.enities);
+      can(item.action, item.entities);
     } else {
-      cannot(item.action, item.enities);
+      cannot(item.action, item.entities);
     }
   });
 });
