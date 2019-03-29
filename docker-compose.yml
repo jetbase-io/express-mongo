@@ -1,0 +1,26 @@
+version: '2'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: "mongo"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/var/log/mongo
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=jetbase
+      - MONGO_INITDB_DATABASE=jetbase
+    volumes:
+      - ./001_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    command: mongod
+
+  jetbase-express-mongo:
+    build:
+      context: .
+    ports:
+      - '3001:3001'
+    environment:
+      - NODE_ENV=dev
+    restart: always
