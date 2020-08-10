@@ -20,7 +20,7 @@ import './utils/auth';
 
 const api = express();
 
-api.use(bodyParser.urlencoded());
+api.use(bodyParser.urlencoded({ extended: true }));
 api.use(bodyParser.json());
 api.use(cors());
 api.use(compression());
