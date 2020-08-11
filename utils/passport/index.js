@@ -12,11 +12,11 @@ passport.use('login', new LocalStrategy({
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      return done(null, false, errors('User not found'));
+      return done(null, false, errors('Invalid email/password supplied'));
     }
     const validate = await user.isValidPassword(user, password);
     if (!validate) {
-      return done(null, false, errors('Wrong Password'));
+      return done(null, false, errors('Invalid email/password supplied'));
     }
     return done(null, user, errors('Logged in Successfully'));
   } catch (error) {
