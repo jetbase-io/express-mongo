@@ -7,15 +7,15 @@ dotenv.config();
 
 mongoose.Promise = global.Promise;
 
-const connection = mongoose.connect(process.env.DB_URL);
+const connection = mongoose.connect(process.env.DB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
 connection
   .then((db) => {
-    logger.info(
-      `Successfully connected to ${process.env.DB_URL} MongoDB cluster in ${
-        process.env.NODE_ENV
-      } mode.`,
-    );
+    logger.info(`Successfully connected to ${process.env.DB_URL} MongoDB cluster in ${process.env.NODE_ENV} mode.`);
     return db;
   })
   .catch((err) => {

@@ -9,7 +9,7 @@ exports.login = (req, res, next) => {
   passport.authenticate('login', async (err, user, message) => {
     try {
       if (err || !user) {
-        return res.status(401).json(message);
+        return res.status(400).json(message);
       }
       return req.login(user, { session: false }, async (error) => {
         if (error) return next(error);
