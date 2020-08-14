@@ -9,10 +9,9 @@ const checkToken = async (req, res, next) => {
   try {
     const count = await Token.countDocuments({ value: req.headers.authorization.split(' ')[1] });
     if (count > 0) {
-      res.status(401).send(errors('Token is expired'));
-    } else {
-      next();
+      return res.status(401).send(errors('Token is expired'));
     }
+    return next();
   } catch (error) {
     logger.error(error);
     return res.status(500).send(errors('Unexpected internal errors'));
