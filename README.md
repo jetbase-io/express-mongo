@@ -1,5 +1,5 @@
 # JetBase Express.js backend for Mongo
-[![Build Status](https://travis-ci.org/jetbase-io/jetbase-express-sql.svg?branch=master)](https://travis-ci.org/jetbase-io/jetbase-express-mongo)
+[![Build Status](https://travis-ci.org/jetbase-io/jetbase-express-mongo.svg?branch=master)](https://travis-ci.org/jetbase-io/jetbase-express-mongo)
 
 Backend application with API
 
