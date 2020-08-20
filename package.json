@@ -13,7 +13,7 @@
   "dependencies": {
     "@casl/ability": "^2.5.1",
     "@casl/mongoose": "^2.3.3",
-    "bcrypt": "^3.0.8",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.4",
